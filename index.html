@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Examples — [Your Paper Title]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F6F2;
+    --ink: #1C1F24;
+    --muted: #6B6F76;
+    --line: #DEDDD6;
+    --accent: #1C6E8C;
+    --accent-2: #E08E45;
+    --cell: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  header { margin-bottom: 8px; }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.25;
+    margin: 0 0 14px;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 15.5px;
+    max-width: 640px;
+    margin: 0;
+  }
+
+  .spectro-bar {
+    height: 5px;
+    margin-top: 30px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #2B4C7E 0%, var(--accent) 35%, #4FA89B 62%, var(--accent-2) 100%);
+  }
+
+  .caption-line {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 34px 0 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .conditions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .condition {
+    background: var(--cell);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .wave-icon { flex: none; color: var(--accent); opacity: 0.8; }
+
+  .condition-info { flex: 1; min-width: 0; }
+
+  .condition-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 4px;
+  }
+
+  .condition-desc {
+    font-size: 14.5px;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 420px;
+    height: 36px;
+    display: block;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+
+  @media (max-width: 560px) {
+    .condition { flex-direction: column; align-items: flex-start; gap: 10px; }
+    audio { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Supplementary Audio · JASA Submission</p>
+    <!-- paper title -->
+    <h1>Audio Examples for "Probing Selective Auditory attention In Bilingual
+      Listeners"</h1>
+    <!-- one or two sentences describing the listening conditions / task -->
+    <p class="subtitle">
+      Audio examples of the five listening conditions referenced in the manuscript,
+      illustrating the settings used in the experiment.
+    </p>
+    <div class="spectro-bar" aria-hidden="true"></div>
+  </header>
+
+  <p class="caption-line">Press play to listen directly in your browser — no download required.</p>
+
+  <div class="conditions">
+
+    <div class="condition">
+      <svg class="wave-icon" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><rect x="0" y="7" width="2" height="6" fill="currentColor"/><rect x="4" y="3" width="2" height="14" fill="currentColor"/><rect x="8" y="5" width="2" height="10" fill="currentColor"/><rect x="12" y="8" width="2" height="4" fill="currentColor"/></svg>
+      <div class="condition-info">
+        <p class="condition-name">Mono</p>
+        <!-- EDIT: short description of this condition -->
+        <p class="condition-desc">A single-speaker narration (male or female, randomly assigned).</p>
+        <audio controls preload="none">
+          <source src="audio/mono_audio.mp3" type="audio/mpeg">
+          Your browser doesn't support inline audio — <a href="audio/mono_audio.mp3">download the file</a> instead.
+        </audio>
+      </div>
+    </div>
+
+    <div class="condition">
+      <svg class="wave-icon" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><rect x="0" y="7" width="2" height="6" fill="currentColor"/><rect x="4" y="3" width="2" height="14" fill="currentColor"/><rect x="8" y="5" width="2" height="10" fill="currentColor"/><rect x="12" y="8" width="2" height="4" fill="currentColor"/></svg>
+      <div class="condition-info">
+        <p class="condition-name">Diotic</p>
+        <!-- EDIT: short description of this condition -->
+        <p class="condition-desc">Male and female speech narratives were arithmetically summed and the resulting mixture presented identically to both ears.</p>
+        <audio controls preload="none">
+          <source src="audio/diotic_audio.mp3" type="audio/mpeg">
+          Your browser doesn't support inline audio — <a href="audio/diotic_audio.mp3">download the file</a> instead.
+        </audio>
+      </div>
+    </div>
+
+    <div class="condition">
+      <svg class="wave-icon" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><rect x="0" y="7" width="2" height="6" fill="currentColor"/><rect x="4" y="3" width="2" height="14" fill="currentColor"/><rect x="8" y="5" width="2" height="10" fill="currentColor"/><rect x="12" y="8" width="2" height="4" fill="currentColor"/></svg>
+      <div class="condition-info">
+        <p class="condition-name">Dichotic — Same Gender</p>
+        <!-- EDIT: short description of this condition -->
+        <p class="condition-desc">Two concurrent speech streams of the same gender (male–male or female–female) presented separately to the left and right ears.</p>
+        <audio controls preload="none">
+          <source src="audio/dichotic_same_gender_audio.mp3" type="audio/mpeg">
+          Your browser doesn't support inline audio — <a href="audio/dichotic_same_gender_audio.mp3">download the file</a> instead.
+        </audio>
+      </div>
+    </div>
+
+    <div class="condition">
+      <svg class="wave-icon" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><rect x="0" y="7" width="2" height="6" fill="currentColor"/><rect x="4" y="3" width="2" height="14" fill="currentColor"/><rect x="8" y="5" width="2" height="10" fill="currentColor"/><rect x="12" y="8" width="2" height="4" fill="currentColor"/></svg>
+      <div class="condition-info">
+        <p class="condition-name">Dichotic — Different Gender</p>
+        <!-- EDIT: short description of this condition -->
+        <p class="condition-desc">Two concurrent speech streams of the different gender (A male and a female) presented simultaneously to separate ears. </p>
+        <audio controls preload="none">
+          <source src="audio/dichotic_different_gender_audio.mp3" type="audio/mpeg">
+          Your browser doesn't support inline audio — <a href="audio/dichotic_different_gender_audio.mp3">download the file</a> instead.
+        </audio>
+      </div>
+    </div>
+
+    <div class="condition">
+      <svg class="wave-icon" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><rect x="0" y="7" width="2" height="6" fill="currentColor"/><rect x="4" y="3" width="2" height="14" fill="currentColor"/><rect x="8" y="5" width="2" height="10" fill="currentColor"/><rect x="12" y="8" width="2" height="4" fill="currentColor"/></svg>
+      <div class="condition-info">
+        <p class="condition-name">Switch</p>
+        <!-- EDIT: short description of this condition -->
+        <p class="condition-desc">Male and female speech narratives were arithmetically summed and the resulting mixture presented identically to both ears.</p>
+        <audio controls preload="none">
+          <source src="audio/switch_audio.mp3" type="audio/mpeg">
+          Your browser doesn't support inline audio — <a href="audio/switch_audio.mp3">download the file</a> instead.
+        </audio>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Trouble playing a file in-browser? <a href="audio/">Browse the raw audio files</a> directly.
+  </footer>
+
+</div>
+</body>
+</html>
